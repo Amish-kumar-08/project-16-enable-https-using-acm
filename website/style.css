@@ -1,0 +1,174 @@
+cat > style.css <<'EOF'
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #e5e7eb;
+    background: #0b1120;
+    line-height: 1.6;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 9%;
+    background: #111827;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+}
+
+.logo span,
+.hero h1 span {
+    color: #38bdf8;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.navbar a {
+    color: #d1d5db;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: #38bdf8;
+}
+
+.hero {
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    padding: 80px 9%;
+    background: linear-gradient(120deg, #0b1120, #172554);
+}
+
+.hero-content {
+    max-width: 760px;
+}
+
+.tagline {
+    color: #38bdf8;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 65px);
+    line-height: 1.15;
+    margin-bottom: 22px;
+}
+
+.description {
+    color: #cbd5e1;
+    font-size: 18px;
+    max-width: 620px;
+    margin-bottom: 32px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 25px;
+    background: #0284c7;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #0369a1;
+}
+
+.services,
+.about {
+    padding: 75px 9%;
+    text-align: center;
+}
+
+.services h2,
+.about h2 {
+    color: white;
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+
+.section-description {
+    color: #94a3b8;
+    margin-bottom: 35px;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.service-card {
+    padding: 30px 22px;
+    background: #172033;
+    border: 1px solid #263449;
+    border-radius: 10px;
+}
+
+.service-card h3 {
+    color: #38bdf8;
+    margin-bottom: 12px;
+}
+
+.service-card p,
+.about p {
+    color: #cbd5e1;
+}
+
+.about {
+    background: #111827;
+}
+
+.about p {
+    max-width: 750px;
+    margin: 15px auto 0;
+}
+
+footer {
+    text-align: center;
+    padding: 22px;
+    color: #94a3b8;
+    background: #080d18;
+}
+
+@media (max-width: 700px) {
+    .navbar {
+        padding: 18px 5%;
+    }
+
+    .navbar ul {
+        gap: 12px;
+        font-size: 13px;
+    }
+
+    .hero {
+        padding: 65px 6%;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+}
+EOF
